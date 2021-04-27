@@ -1,4 +1,4 @@
-# Activity_1 Project In Action
+# Activity 1 Project In Action
 
 |ON|OFF|
 |:--:|:--:|
