@@ -2,7 +2,7 @@
 
 # Car Seat Heater 
 
-## In Action
+## In Action Activity 1
 
 |ON|OFF|
 |:--:|:--:|
