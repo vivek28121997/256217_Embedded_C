@@ -14,14 +14,17 @@
  */
 
 int Activity_3(void)
-{
+{   InitADC();
+    uint16_t temp;
     unsigned volatile int ADC_value;
     TCCR1A|=(1<<COM1A1)|(1<<WGM11)|(1<<WGM10);//
     TCCR1B|=(1<<WGM12)|(1<<CS11)|(1<<CS10); //64 pre-scalar
-    DDRB|=(1<<PB1);
+    DDRB|=(1<<PB0);
 
     while(1)
     {
+        temp=ReadADC(0); //channel 0
+        _delay_ms(200);
         ADC_value=ReadADC(0);
         if(ADC_value>0 && ADC_value<=200)
         {
