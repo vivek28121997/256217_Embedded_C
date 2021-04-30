@@ -25,7 +25,6 @@
 #define Heater_Pin ((1<<PD1))
 #define Seat_Occupied (!(PIND&(1<<PD0))&&(!(PIND&(1<<PD1))))
 void init_port();
-void change_led_state(uint8_t state);
 int Activity_1();
 
 #define F_CPU 16000000UL 	/**< to Define the Clock Frequency as 16 MHz */
@@ -34,7 +33,7 @@ int Activity_1();
 
 /**
  * Include files
- */ 
+ */
 #include <avr/io.h>
 #include <util/delay.h>
 
@@ -50,7 +49,7 @@ void setup_io_pins(void);
 
 /**
  * @brief Set the gpio state
- * 
+ *
  * @param port Number of the port to which the pin belongs to
  * @param pin Number of the pin in the port
  * @param state Level of the pin, HIGH or LOW
@@ -59,7 +58,7 @@ void set_gpio_state(uint8_t port, uint8_t pin, uint8_t state);
 
 /**
  * @brief Function to generate delay in micro seconds
- * 
+ *
  * @param delaytime in micro seconds
  */
 void delay_ms(unsigned int delaytime);
@@ -73,7 +72,7 @@ void delay_ms(unsigned int delaytime);
 
 /**
  * Include files
- */ 
+ */
 #include <avr/io.h>
 
 /**
@@ -82,9 +81,9 @@ void delay_ms(unsigned int delaytime);
 
 /**
  * @brief Change the state of the LED Pin according to the value of state
- * 
+ *
  * @param state Pin level to which the LED Pin should be set
  */
 void change_led_state(uint8_t state);
 
-#endif // ACTIVITY_H_INCLUDED
+#endif // ACTIVITY_1_H_INCLUDED
