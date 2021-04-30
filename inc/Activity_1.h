@@ -1,5 +1,5 @@
-#ifndef ACTIVITY_H_INCLUDED
-#define ACTIVITY_H_INCLUDED
+#ifndef ACTIVITY_1_H_INCLUDED
+#define ACTIVITY_1_H_INCLUDED
 
 /**
  * @file Activity_1.h
@@ -26,7 +26,7 @@
 #define Seat_Occupied (!(PIND&(1<<PD0))&&(!(PIND&(1<<PD1))))
 void init_port();
 void change_led_state(uint8_t state);
-int Activity1();
+int Activity_1();
 
 #define F_CPU 16000000UL 	/**< to Define the Clock Frequency as 16 MHz */
 #define HIGH 	(1)			/**< GPIO state HIGH */
