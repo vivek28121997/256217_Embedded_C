@@ -1,6 +1,6 @@
 #include <avr/io.h>
 #include <util/delay.h>
-#include <Activity_2.h>
+#include "Activity_2.h"
 /**
  * @file Activity_2.c
  * @author (256217)Vivek Kumar Yadav
@@ -19,7 +19,7 @@ void InitADC()
 }
 uint16_t ReadADC(uint8_t ch)
 {
-    init_ADC();
+    InitADC();
     //select ADC channel ch must be 0-7
     ADMUX&=0xf8;//clear last 3 bits
     ch=ch&0b00000111; // set channel number
