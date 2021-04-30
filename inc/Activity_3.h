@@ -11,7 +11,7 @@
  * @copyright Copyright (c) 2021
  *
  */
-
+void InitADC();
 uint16_t ReadADC(uint8_t );
 int Activity_3();
 
