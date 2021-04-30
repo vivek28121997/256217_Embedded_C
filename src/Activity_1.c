@@ -12,7 +12,7 @@
  *
  */
 
-void init_port()
+void setup_io_pins(void)
 {
     SetPortB |=LED_Pin;   // set B0=1 for led(output pin high)
     SetPortD&=~Seat_Pin;   // clear bit pin D0
