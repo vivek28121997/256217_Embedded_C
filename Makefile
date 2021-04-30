@@ -1,9 +1,13 @@
-PROJ_NAME = Blinky
+PROJ_NAME = Seat_Heater_System
 
 BUILD_DIR = Build
 
 # All Source code files
 SRC = project_main.c\
+src/Activity_1.c\
+src/Activity_2.c\
+src/Activity_3.c\
+src/Activity_4.c\
 src/user_utils.c
 
 # All header file paths
