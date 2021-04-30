@@ -1,16 +1,4 @@
 # Activity Project In Action
 
-|ON|OFF|
-|:--:|:--:|
-|\image html ON.png||
+![Activity](https://github.com/vivek28121997/256217_Embedded_C/blob/74c987b75d56de0fd1d3d86f8daab107359850fa/simulation/Activity.png)
 
-## Code 
-```
-	for(;;)
-	{
-        change_led_state(HIGH);
-		delay_ms(LED_ON_TIME);
-        change_led_state(LOW);
-		delay_ms(LED_OFF_TIME);	
-	}
-```
