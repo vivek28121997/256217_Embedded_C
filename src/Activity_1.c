@@ -1,14 +1,24 @@
-#include "Activity_1.h"
+#include <avr/io.h>
+#include "Activity.h"
 
-void setup_io_pins(void)
+/**
+ * @file Activity_1.c
+ * @author (256217)Vivek Kumar Yadav
+ * @brief Initialising pins and to define condition for the interfaced peripherals
+ * @version 0.1
+ * @date 2021-04-22
+ *
+ * @copyright Copyright (c) 2021
+ *
+ */
+
+void init_port()
 {
-	//DDRB |= (1 << DDB0);
-	DDRB |=(1<<PB0); // B0=1 for led
-	DDRD&=~(1<<PD0); // clear bit
-	PORTD|=(1<<PD0);
-	DDRD&=~(1<<PD1); // clear bit
-	PORTD|=(1<<PD1);
-
+    SetPortB |=LED_Pin;   // set B0=1 for led(output pin high)
+    SetPortD&=~Seat_Pin;   // clear bit pin D0
+    PORTD|=Seat_Pin;       //set bit high for Seat pin D0
+    SetPortD&=~Heater_Pin; // clear bit pin D1
+    PORTD|=Heater_Pin;     //set bit high for Heater pin D1
 }
 
 void set_gpio_state(uint8_t port, uint8_t pin, uint8_t state)
@@ -16,14 +26,6 @@ void set_gpio_state(uint8_t port, uint8_t pin, uint8_t state)
 	port = (HIGH << pin);
 }
 
-void delay_ms(unsigned int delaytime)
-{
-	int i = 0;
-	for (i = 0; i <= delaytime; i++)
-	{
-		_delay_ms(1000); // delay in ms
-	}
-}
 
 /**
  * @brief Main Function where the Code execution starts
@@ -39,18 +41,15 @@ int main(void)
 
 	while (1)
 	{	
-		if(!(PIND&(1<<PD0))&&(!(PIND&(1<<PD1))))//switch press
- 	        {
-       		 PORTB|=(1<<PB0);
-     		}
-     		else{
-       		 PORTB&=~(1<<PB0);
-		}
-		/*set_gpio_state(PORTB, PORTB0, HIGH);
-		delay_ms(1000);
+	      if(Seat_Occupied) //both seat and heater switch press when seat occupied
+	        {
+	        LED_Status|=LED_Pin;
+	      }
+	      else{
+	        LED_Status&=~LED_Pin;}
+		/*set_gpio_state(LED_Status, LED_Pin, HIGH);
 
-		set_gpio_state(PORTB, PORTB0, LOW);
-		delay_ms(500);*/
+		set_gpio_state(LED_Status, LED_Pin, LOW);*/
 	}
 	return 0;
 }
