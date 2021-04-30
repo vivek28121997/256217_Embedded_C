@@ -1,5 +1,5 @@
-#ifndef USART_H_INCLUDED
-#define USART_H_INCLUDED
+#ifndef ACTIVITY_4_H_INCLUDED
+#define ACTIVITY_4_H_INCLUDED
 
 /**
  * @file Activity_4.h
@@ -11,10 +11,10 @@
  * @copyright Copyright (c) 2021
  *
  */
- 
-void Display(uint16_t )
+
+void Display(uint16_t );
 void USARTInit(uint16_t );
 char USARTReadChar();
 void USARTWriteChar(char );
 
-#endif // USART_H_INCLUDED
+#endif // ACTIVITY_4_H_INCLUDED
