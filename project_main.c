@@ -1,15 +1,18 @@
 /**
  * @file project_main.c
- * @author Bharath.G ()
- * @brief Project to Blink an LED at 1000ms ON and 500 ms OFF Interval
+ * @author (256217)Vivek Kumar Yadav
+ * @brief Project to define a seat heater systems for passenger occupancy
  * @version 0.1
- * @date 2021-04-23
+ * @date 2021-04-29
  * 
  * @copyright Copyright (c) 2021
  * 
  */
 #include "project_config.h"
-
+#include "Activity_1.h"
+#include "Activity_2.h"
+#include "Activity_3.h"
+#include "Activity_4.h"
 #include "user_utils.h"
 #include "blinky.h"
 
@@ -20,7 +23,7 @@
 void peripheral_init(void)
 {
 	/* Configure LED Pin */
-	DDRB |= (1 << DDB0);
+	//DDRB |= (1 << DDB0);
 }
 
 void change_led_state(uint8_t state)
@@ -38,7 +41,21 @@ void change_led_state(uint8_t state)
  */
 int main(void)
 {
-	/* Initialize Peripherals */
+	    while(1)
+	    {
+	    int occupancy=0;
+	    occupancy = Activity_1();
+	    if(occupancy==1)
+	    {
+	        uint16_t temp=0;
+	        temp=ReadADC(0);
+	        Activity_3();
+	        Display(temp);
+
+    }
+    }
+    return 0;
+	/* Initialize Peripherals 
 	peripheral_init();
 
 	for(;;)
@@ -49,5 +66,5 @@ int main(void)
         change_led_state(LED_OFF);
 		delay_ms(LED_OFF_TIME);	
 	}
-	return 0;
+	return 0;*/
 }
