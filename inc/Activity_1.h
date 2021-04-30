@@ -1,17 +1,33 @@
+#ifndef ACTIVITY_H_INCLUDED
+#define ACTIVITY_H_INCLUDED
+
 /**
  * @file Activity_1.h
- * @author 256217 Vivek Kumar Yadav
- * @brief Project to check Button Sensor for seated, then set the LED Actuator and Heater ON connected to AVR328 MCU GPIO Pin
+ * @author (256217)Vivek Kumar Yadav
+ * @brief Configuration file to define pins and ports for the interfaced peripherals
  * @version 0.1
  * @date 2021-04-22
- * 
+ *
  * @copyright Copyright (c) 2021
- * 
+ *
  */
 
 /**
  * Macro Definitions
  */
+
+#define SetPortB (DDRB)
+#define LED_Status (PORTB)  //**< LED Port Number */
+#define LED_Pin ((1<<PB0))  //**< LED Pin number  */
+#define SetPortD (DDRD)
+#define Switch_Status (PORTD)
+#define Seat_Pin ((1<<PD0))
+#define Heater_Pin ((1<<PD1))
+#define Seat_Occupied (!(PIND&(1<<PD0))&&(!(PIND&(1<<PD1))))
+void init_port();
+void change_led_state(uint8_t state);
+int Activity1();
+
 #define F_CPU 16000000UL 	/**< to Define the Clock Frequency as 16 MHz */
 #define HIGH 	(1)			/**< GPIO state HIGH */
 #define LOW 	(0)			/**< GPIO state LOW */
@@ -47,3 +63,6 @@ void set_gpio_state(uint8_t port, uint8_t pin, uint8_t state);
  * @param delaytime in micro seconds
  */
 void delay_ms(unsigned int delaytime);
+
+
+#endif // ACTIVITY_H_INCLUDED
