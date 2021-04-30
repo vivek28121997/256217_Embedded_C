@@ -12,7 +12,7 @@
  *
  */
 
-uint16_t ReadADC(uint8_t )
-int Activity_3(void);
+uint16_t ReadADC(uint8_t );
+int Activity_3();
 
 #endif // ACTIVITY_3_H_INCLUDED
