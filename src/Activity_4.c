@@ -3,6 +3,17 @@
 #include "USART.h"
 
 /**
+ * @file Activity_4.c
+ * @author (256217)Vivek Kumar Yadav
+ * @brief Initialising pins and serial monitor display of temperature as set for the interfaced peripherals
+ * @version 0.1
+ * @date 2021-04-27
+ *
+ * @copyright Copyright (c) 2021
+ *
+ */
+
+/**
  * @brief USART port initializtions 
  * 
  * @param ubrr_value 
