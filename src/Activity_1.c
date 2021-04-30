@@ -29,7 +29,7 @@ void set_gpio_state(uint8_t port, uint8_t pin, uint8_t state)
 
 /**
  * @brief Main Function where the Code execution starts
- * 
+ *
  * @return int Return 0 if the program completes successfully
  * @note PORTB0 is in sink config. i.e when pin is Low, the LED will turn OFF
  * @note PORTB0 is in sink config. i.e when pin is High, the LED will turn ON
@@ -40,7 +40,7 @@ int Activity_1(void)
 	setup_io_pins();
 
 	while (1)
-	{	
+	{
 	      if(Seat_Occupied) //both seat and heater switch press when seat occupied
 	        {
 	        LED_Status|=LED_Pin;
