@@ -1,5 +1,5 @@
 #include <avr/io.h>
-#include "Activity.h"
+#include "Activity_1.h"
 
 /**
  * @file Activity_1.c
@@ -34,7 +34,7 @@ void set_gpio_state(uint8_t port, uint8_t pin, uint8_t state)
  * @note PORTB0 is in sink config. i.e when pin is Low, the LED will turn OFF
  * @note PORTB0 is in sink config. i.e when pin is High, the LED will turn ON
  */
-int main(void)
+int Activity_1(void)
 {
 	// setup the leds
 	setup_io_pins();
