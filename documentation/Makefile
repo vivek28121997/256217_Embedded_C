@@ -1,4 +1,4 @@
-DOXY_FILE = Activity_1
+DOXY_FILE = Activity
 doc:
 	doxygen ./$(DOXY_FILE)
 
