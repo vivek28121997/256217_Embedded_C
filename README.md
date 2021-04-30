@@ -1,7 +1,7 @@
 # Embedded C Programming Activities with Continuous Integration and Code Quality
 
 # Car Seat Heater 
-![Activity](https://github.com/vivek28121997/256217_Embedded_C/blob/74c987b75d56de0fd1d3d86f8daab107359850fa/simulation/Activity.png)
+![Activity](https://github.com/vivek28121997/256217_Embedded_C/blob/c74441ec68b2ed644104b54bb71940eab6ab7452/simulation/Activity.png)
 ## In Action Activity 1
 
 |ON|OFF|
