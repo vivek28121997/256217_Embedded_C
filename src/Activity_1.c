@@ -4,7 +4,7 @@
 /**
  * @file Activity_1.c
  * @author (256217)Vivek Kumar Yadav
- * @brief Initialising pins and to define condition for the interfaced peripherals
+ * @brief Project to check Button Sensor for seated, then set the LED Actuator and Heater ON connected to AVR328 MCU GPIO Pin
  * @version 0.1
  * @date 2021-04-22
  *
